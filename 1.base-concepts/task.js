@@ -24,4 +24,3 @@ function solveEquation(a, b, c) {
   let totalAmount = kredit + (monthlyPayment * 12);
   return +totalAmount.toFixed(2);
 }
-calculateTotalMortgage()
