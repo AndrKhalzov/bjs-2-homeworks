@@ -73,16 +73,16 @@ class Library {
         this.books.push(book)
         }
 
-        findBookBy(type, value) {
-            let foundBook = this.books.find(book => book[type] === value)
-            return foundBook !== undefined ? foundBook : null;
+    findBookBy(type, value) {
+        let foundBook = this.books.find(book => book[type] === value)
+        return foundBook !== undefined ? foundBook : null;
         }
 
-        giveBookByName(bookName) {
-            if(bookName !== undefined) {
-
-            } else {
-                return null;
-            }
-    }
+    giveBookByName(bookName) {
+        let book = this.findBookBy(bookName);
+        if (book) {
+            this.books.splice(this.books.indexOf(book), 1);
+        }
+        return book;
+        }
 }
